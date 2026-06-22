@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, Leaf, CheckCircle, ArrowRight, ShieldCheck, Award, Truck, Sparkles, MessageCircle, ChevronDown, Landmark } from "lucide-react";
+import { Leaf, CheckCircle, ArrowRight, ShieldCheck, Award, Truck, Sparkles, MessageCircle, ChevronDown, Landmark } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 import { products } from "@/data/products";
 
@@ -153,7 +153,7 @@ export default function Home() {
       <div className="absolute top-[50%] left-[20%] w-[450px] h-[450px] rounded-full bg-primary-glow/8 blur-[110px] pointer-events-none -z-10 animate-float-soft" />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
           variants={containerVariants}
@@ -162,20 +162,7 @@ export default function Home() {
         >
           {/* Hero Copy (Left Column) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            {/* Rating Badge */}
-            <motion.div
-              className="inline-flex items-center gap-2 bg-card/60 backdrop-blur-md border border-primary/20 px-4 py-1.5 rounded-full shadow-sm mb-6"
-              variants={itemVariants}
-            >
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current text-gold" />
-                ))}
-              </div>
-              <span className="text-xs font-body font-semibold tracking-wide text-foreground/80">
-                Loved by 1,000+ households
-              </span>
-            </motion.div>
+            {/* Hero Trust Badge - Removed */}
 
             {/* Headline */}
             <motion.h1
