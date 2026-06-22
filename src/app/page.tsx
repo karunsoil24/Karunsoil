@@ -82,8 +82,71 @@ export default function Home() {
   const heroWhatsAppMsg = "Hello Karuna Enterprises,\n\nI want to order your pure cold pressed oils and authentic spices.\n\nPlease share the catalog and pricing details.\n\nThank you.";
   const heroWhatsAppUrl = getWhatsAppLink(heroWhatsAppMsg);
 
+  // FAQPage Schema for AEO (AI Engine Optimization)
+  const homeFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": siteConfig.faqs.slice(0, 6).map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a,
+      },
+    })),
+  };
+
+  // BreadcrumbList Schema for Homepage
+  const homeBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteConfig.url
+      }
+    ]
+  };
+
   return (
     <div className="relative overflow-x-hidden min-h-screen bg-background text-foreground selection:bg-primary/20">
+      {/* Structured Data: FAQPage for AEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+      />
+      {/* Structured Data: BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeBreadcrumbSchema) }}
+      />
+
+      {/* GEO: AI-readable concise answer blocks (visually hidden, crawlable) */}
+      <div className="sr-only" aria-hidden="false">
+        <section>
+          <h2>What is Cold Pressed Coconut Oil?</h2>
+          <p>Cold pressed coconut oil is produced by mechanically extracting oil from sun-dried copra at low temperatures without heat or chemical solvents. This process preserves natural nutrients, lauric acid, and the fresh aroma of coconuts. KARUN&apos;S manufactures pure cold pressed coconut oil at their facility in Chelakkara, Thrissur, Kerala.</p>
+        </section>
+        <section>
+          <h2>Where is KARUN&apos;S located?</h2>
+          <p>KARUN&apos;S is the brand name of Karuna Enterprises, a food manufacturing company located in Chelakkara, Thrissur district, Kerala, India. The company manufactures cold pressed edible oils and authentic spice products.</p>
+        </section>
+        <section>
+          <h2>Does KARUN&apos;S deliver across India?</h2>
+          <p>Yes, KARUN&apos;S offers all-India delivery. Products are shipped directly from the Kerala factory using trusted logistics partners with safe, drop-proof cargo packaging. Same-day delivery is available within the Thrissur area.</p>
+        </section>
+        <section>
+          <h2>What products does KARUN&apos;S manufacture?</h2>
+          <p>KARUN&apos;S manufactures cold pressed coconut oil, sesame oil, peanut oil, coriander powder, sambar powder, chilli powder, turmeric powder, garam masala, and chicken masala. All products are FSSAI certified and made without chemical solvents or artificial additives.</p>
+        </section>
+        <section>
+          <h2>How to order from KARUN&apos;S?</h2>
+          <p>You can order KARUN&apos;S products by clicking any &quot;Order on WhatsApp&quot; button on the website, calling +91 7994782438, or emailing karunaenterpricescka2024@gmail.com.</p>
+        </section>
+      </div>
+
       {/* Decorative blurred background organic blobs */}
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/8 blur-[120px] pointer-events-none -z-10 animate-float-slow" />
       <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-accent/25 blur-[130px] pointer-events-none -z-10" />

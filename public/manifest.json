@@ -1,15 +1,31 @@
 {
-  "name": "KARUN'S Food Products",
+  "name": "KARUN'S Food Products — Pure Kerala Oils & Spices",
   "short_name": "KARUN'S",
-  "description": "Pure Cold Pressed Oils & Authentic Spices from Kerala",
+  "description": "Shop 100% pure cold pressed coconut oil, sesame oil, peanut oil and authentic Kerala masala powders. FSSAI certified. Direct from Thrissur factory.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#f8f9fa",
-  "theme_color": "#4b7f52",
+  "orientation": "portrait-primary",
+  "background_color": "#FAF9F5",
+  "theme_color": "#487850",
+  "lang": "en",
+  "categories": ["food", "shopping"],
   "icons": [
     {
       "src": "/assets/karuna_logo.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/karuna_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ]

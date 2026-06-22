@@ -51,15 +51,47 @@ function ProductsContent() {
         "name": product.name,
         "description": product.shortDescription,
         "image": `${siteConfig.url}${product.image}`,
+        "brand": {
+          "@type": "Brand",
+          "name": "KARUN'S"
+        },
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "Karuna Enterprises",
+          "url": siteConfig.url
+        },
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
           "price": product.priceApprox.replace("₹", ""),
           "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2027-12-31"
+          "priceValidUntil": "2027-12-31",
+          "seller": {
+            "@type": "Organization",
+            "name": "Karuna Enterprises"
+          }
         }
       }
     }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteConfig.url
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": `${siteConfig.url}/products`
+      }
+    ]
   };
 
   return (
@@ -67,6 +99,10 @@ function ProductsContent() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Background decoration */}
