@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, MessageCircle, Star, Sparkles } from "lucide-react";
+import { MessageCircle, Star, Sparkles } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 import { products } from "@/data/products";
 
@@ -118,55 +118,24 @@ function ProductsContent() {
                 {flagshipProduct.name}
               </h1>
 
-              <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
-                {flagshipProduct.description}
+              <p className="text-sm sm:text-base text-foreground/85 leading-relaxed font-medium">
+                {flagshipProduct.shortDescription}
               </p>
 
-              {/* Specifications checklist */}
-              <div>
-                <h4 className="text-xs uppercase font-bold tracking-wider text-muted-foreground mb-3">
-                  Purity Standards & Sourcing details
-                </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-foreground/85">
-                  {flagshipProduct.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              {/* Key Benefits */}
+              <div className="pt-2">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {flagshipProduct.benefits.slice(0, 3).map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-1.5 text-sm text-foreground/85">
+                      <span className="text-primary font-bold shrink-0">✓</span>
                       <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* B2B / Wholesale Section */}
-              <div className="p-5 rounded-2xl bg-white/65 border border-primary/10 space-y-2">
-                <span className="block text-[10px] uppercase font-bold tracking-widest text-primary">Wholesale & Trade Accounts</span>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  We supply private label white branding, hotel HoReCa accounts, and retail distributions across South India. Wholesale pricing quotes available immediately on inquiry.
-                </p>
-                <div className="flex items-center gap-4 text-xs font-semibold pt-1">
-                  <span>MOQ: 15 Liters</span>
-                  <span className="text-primary-glow">✓ Doorstep Cargo Shipping</span>
-                </div>
-              </div>
-
               {/* CTA row */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-4 border-t border-border/60">
-                {/* Product Pricing - Waiting for final pricing
-                <div className="flex flex-col text-left">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Approximate Pricing</span>
-                  <span className="font-display text-2xl font-bold text-foreground">
-                    {flagshipProduct.priceApprox} <span className="text-xs font-body font-normal text-muted-foreground">/ size standard</span>
-                  </span>
-                  <span className="text-[10px] text-muted-foreground/80 mt-0.5">Sizes: {flagshipProduct.sizes.join(", ")}</span>
-                </div>
-                */}
-                <div className="flex flex-col text-left">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Availability</span>
-                  <span className="font-display text-lg font-semibold text-foreground">
-                    In Stock
-                  </span>
-                  <span className="text-[10px] text-muted-foreground/80 mt-0.5">Sizes: {flagshipProduct.sizes.join(", ")}</span>
-                </div>
+              <div className="pt-4 border-t border-border/60 flex justify-end">
                 <a
                   href={getWhatsAppLink(flagshipProduct.whatsappText)}
                   target="_blank"
@@ -261,60 +230,36 @@ function ProductsContent() {
                       <h3 className="font-display text-xl font-bold text-foreground">
                         {product.name}
                       </h3>
-                      <p className="text-sm text-foreground/80 leading-relaxed line-clamp-3">
-                        {product.description}
+                      {/* 1-Line Description */}
+                      <p className="text-xs sm:text-sm text-foreground/75 leading-relaxed">
+                        {product.shortDescription}
                       </p>
-                    </div>
 
-                    {/* Benefits bullet points */}
-                    <div className="pt-2">
-                      <ul className="space-y-1 text-xs text-foreground/80">
-                        {product.benefits.slice(0, 2).map((benefit, idx) => (
-                          <li key={idx} className="flex items-start gap-1.5">
-                            <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Pack sizes chips */}
-                    <div className="pt-3 border-t border-border/40">
-                      <div className="flex flex-wrap gap-1.5">
-                        {product.sizes.map((size) => (
-                          <span
-                            key={size}
-                            className="bg-accent/60 border border-primary/5 text-[10px] font-semibold px-2.5 py-1 rounded-full text-foreground/90 shadow-sm"
-                          >
-                            {size}
-                          </span>
-                        ))}
+                      {/* Key Benefits (max 3, prefixed with ✓) */}
+                      <div className="pt-2">
+                        <ul className="space-y-1.5">
+                          {product.benefits.slice(0, 3).map((benefit, idx) => (
+                            <li key={idx} className="flex items-start gap-1.5 text-xs text-foreground/85">
+                              <span className="text-primary font-bold shrink-0">✓</span>
+                              <span>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
 
-                  {/* Footer actions */}
-                  <div className="flex items-center justify-between pt-6 border-t border-border/60 mt-6">
-                    {/* Product Pricing - Waiting for final pricing
-                    <div>
-                      <span className="block text-[9px] uppercase font-bold tracking-wider text-muted-foreground">Approx. Price</span>
-                      <span className="font-display text-lg font-bold text-foreground">
-                        {product.priceApprox} <span className="text-xs font-body font-normal text-muted-foreground">/ standard</span>
-                      </span>
-                    </div>
-                    */}
-                    <div>
-                      <span className="block text-[9px] uppercase font-bold tracking-wider text-muted-foreground">Availability</span>
-                      <span className="text-sm font-semibold text-foreground/80">In Stock</span>
-                    </div>
+                  {/* Footer Action */}
+                  <div className="pt-5 border-t border-border/60 mt-6 flex justify-end">
                     <a
                       href={waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center p-3 rounded-full bg-primary text-white hover:bg-primary-glow shadow-sm hover:shadow transition-all duration-300 hover:-translate-y-0.5"
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-white hover:bg-primary-glow shadow-sm hover:shadow transition-all duration-300 hover:-translate-y-0.5 text-xs font-bold uppercase tracking-wider group"
                       aria-label={`Order ${product.name} on WhatsApp`}
                     >
-                      <MessageCircle className="w-4.5 h-4.5" />
+                      <span>Order on WhatsApp</span>
+                      <MessageCircle className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
                     </a>
                   </div>
                 </motion.div>

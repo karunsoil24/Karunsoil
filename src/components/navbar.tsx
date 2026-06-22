@@ -24,6 +24,31 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll Lock when Mobile Menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  // Close Mobile Menu on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
@@ -112,31 +137,68 @@ export default function Navbar() {
 
       {/* Mobile Drawer menu */}
       {isOpen && (
-        <div className="lg:hidden animate-in fade-in slide-in-from-top duration-300">
-          <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3 bg-background/95 border-b border-border shadow-lg mt-3 glass-nav">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-2.5 rounded-xl font-body text-base font-medium transition-colors ${
-                    isActive
-                      ? "bg-primary/10 text-primary font-semibold"
-                      : "text-foreground hover:bg-muted"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-            <div className="pt-4 pb-2 px-4">
+        <div className="fixed inset-0 z-50 lg:hidden flex justify-end">
+          {/* Backdrop (Tapping outside closes menu) */}
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300 cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          />
+
+          {/* Drawer Panel */}
+          <div className="relative w-full max-w-[300px] h-full bg-background border-l border-border shadow-2xl flex flex-col justify-between p-6 z-10 animate-in slide-in-from-right duration-300">
+            {/* Header: Logo & Close */}
+            <div className="flex items-center justify-between">
+              <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 group">
+                <div className="relative w-8 h-8 overflow-hidden rounded-full bg-white flex items-center justify-center border border-primary/20 shadow-sm">
+                  <Image
+                    src="/assets/karuna_logo.png"
+                    alt="Karuna Logo"
+                    width={32}
+                    height={32}
+                    className="object-cover"
+                  />
+                </div>
+                <span className="font-display text-lg font-bold tracking-tight text-foreground">
+                  {siteConfig.name}
+                </span>
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="inline-flex items-center justify-center p-2 rounded-full text-foreground/80 hover:text-primary hover:bg-primary/10 transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Links */}
+            <nav className="flex flex-col gap-5 my-auto">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block py-2.5 rounded-xl font-body text-lg font-medium transition-colors ${
+                      isActive
+                        ? "text-primary font-semibold"
+                        : "text-foreground hover:text-primary"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* WhatsApp Button at bottom */}
+            <div className="pt-4">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 font-body text-sm font-semibold text-white bg-primary py-3 rounded-xl hover:bg-primary-glow shadow transition-all duration-300"
+                className="w-full flex items-center justify-center gap-2 font-body text-sm font-semibold text-white bg-primary py-3.5 rounded-full hover:bg-primary-glow shadow transition-all duration-300"
               >
                 Order on WhatsApp
                 <ArrowUpRight className="w-4 h-4" />

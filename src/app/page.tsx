@@ -12,6 +12,8 @@ export default function Home() {
   const faqPreview = siteConfig.faqs.slice(0, 4);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
+  const scrollingProducts = [...products, ...products];
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -303,11 +305,10 @@ export default function Home() {
           </h2>
         </div>
 
-        {/* Outer scrolling container - auto scrolls on desktop, swipe scrollable on mobile */}
-        <div className="w-full overflow-x-auto no-scrollbar md:overflow-hidden py-4">
-          <div className="flex gap-6 md:gap-8 w-max md:animate-marquee hover:[animation-play-state:paused]">
-            {/* Render 18 cards: 9 original + 9 cloned for seamless infinite loop */}
-            {[...products, ...products].map((product, idx) => {
+        {/* Outer scrolling container - auto scrolls on desktop and mobile */}
+        <div className="w-full overflow-hidden py-4">
+          <div className="flex gap-6 md:gap-8 w-max animate-marquee will-change-transform md:hover:[animation-play-state:paused]">
+            {scrollingProducts.map((product, idx) => {
               return (
                 <div
                   key={`${product.id}-${idx}`}
