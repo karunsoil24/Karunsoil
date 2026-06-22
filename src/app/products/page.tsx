@@ -80,10 +80,10 @@ function ProductsContent() {
             <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-2">Our Signature Product</span>
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">Featured Flagship Oil</h2>
           </div>
-          
+
           {/* Featured Row Layout Card */}
           <div className="relative overflow-hidden bg-gradient-to-br from-[#F0F2EB] to-[#FAF9F5] rounded-[2.5rem] border border-primary/20 p-8 sm:p-12 shadow-md hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Corner Decorative Star */}
             <div className="absolute top-6 right-6 text-gold shrink-0">
               <Sparkles className="w-8 h-8 opacity-40 animate-pulse" />
@@ -92,7 +92,7 @@ function ProductsContent() {
             {/* Left Column: Flagship Image */}
             <div className="lg:col-span-5 relative w-full aspect-square rounded-3xl overflow-hidden border border-white/60 shadow-lg">
               <Image
-                src="/assets/hero-coconut.png"
+                src="/assets/Karun’s coconut oil.png"
                 alt="KARUN'S Flagship Cold Pressed Coconut Oil"
                 fill
                 className="object-cover"
@@ -204,9 +204,8 @@ function ProductsContent() {
               <button
                 key={tab}
                 onClick={() => handleCategoryChange(tab)}
-                className={`py-4 px-2 font-display text-base font-semibold uppercase tracking-wider relative transition-colors ${
-                  activeCategory === tab ? "text-primary font-bold" : "text-muted-foreground hover:text-foreground"
-                }`}
+                className={`py-4 px-2 font-display text-base font-semibold uppercase tracking-wider relative transition-colors ${activeCategory === tab ? "text-primary font-bold" : "text-muted-foreground hover:text-foreground"
+                  }`}
               >
                 {tab}
                 {activeCategory === tab && (

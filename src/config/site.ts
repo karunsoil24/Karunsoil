@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "KARUN'S",
   legalName: "Karuna Enterprises",
-  phone: "+919876543210", // Placeholder default, easy to update
-  phoneFormatted: "+91 98765 43210",
-  email: "info@karunafoods.com", // Placeholder default
+  phone: "+917994782438", // Official contact number
+  phoneFormatted: "+91 79947 82438",
+  email: "karunaenterpricescka2024@gmail.com", // Official email
   address: "Karuna Enterprises, Chelakkara, Thrissur, Kerala, India - 680586",
   addressLocality: "Chelakkara, Thrissur",
   addressRegion: "Kerala",
@@ -11,7 +11,7 @@ export const siteConfig = {
   url: "https://karunafoods.com", // Canonical URL domain placeholder
   title: "Pure Kerala Coconut Oil & Spices | KARUN'S",
   description: "Shop 100% pure cold pressed coconut oil, virgin coconut oil, sesame oil, peanut oil & authentic Kerala masala powders. FSSAI certified. Direct from Thrissur factory.",
-  whatsappBaseUrl: "https://wa.me/919876543210", // Default WhatsApp link base
+  whatsappBaseUrl: "https://wa.me/917994782438", // Official WhatsApp link base
   
   keywords: [
     "Cold Pressed Coconut Oil Kerala",
@@ -235,7 +235,7 @@ export const siteConfig = {
     },
     {
       q: "How do I contact KARUN'S?",
-      a: "You can reach us through our Contact Page. You can email us at info@karunafoods.com, call us at +91 98765 43210, or directly message us on WhatsApp using the floating button visible on every page."
+      a: "You can reach us through our Contact Page. You can email us at karunaenterpricescka2024@gmail.com, call us at +91 79947 82438, or directly message us on WhatsApp using any of the Order on WhatsApp buttons."
     }
   ]
 };

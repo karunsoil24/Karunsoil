@@ -108,7 +108,7 @@ export default function Home() {
                 ))}
               </div>
               <span className="text-xs font-body font-semibold tracking-wide text-foreground/80">
-                Loved by 12,000+ households
+                Loved by 1,000+ households
               </span>
             </motion.div>
 
@@ -186,7 +186,7 @@ export default function Home() {
               variants={imageContainerVariants}
             >
               <Image
-                src="/assets/hero-coconut.png"
+                src="/assets/Karun's extra virgin coconut oil hero.png"
                 alt="KARUN'S Cold Pressed Coconut Oil flagship bottle"
                 fill
                 priority
@@ -233,12 +233,12 @@ export default function Home() {
         <div className="absolute top-[10%] right-[5%] w-48 h-48 bg-primary/5 rounded-full blur-2xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
+
             {/* Layered Card Image Overlays (Left) */}
             <div className="lg:col-span-5 relative flex items-center justify-center py-6">
               {/* Stacked background card (Layered under) */}
               <div className="absolute w-[280px] h-[350px] sm:w-[320px] sm:h-[400px] bg-primary/20 border border-primary/20 rounded-[2rem] transform -rotate-3 translate-x-[-15px] translate-y-[-10px] pointer-events-none" />
-              
+
               {/* Main image card (Layered over) */}
               <div className="relative w-[280px] h-[350px] sm:w-[320px] sm:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-[#FAF9F5] transform rotate-1 hover:rotate-0 transition-transform duration-500">
                 <Image
@@ -369,7 +369,7 @@ export default function Home() {
 
           {/* Asymmetric Minimal Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[160px] sm:auto-rows-[180px]">
-            
+
             {/* Card 1: Cold Pressed Production (col-span-2) */}
             <div className="bg-gradient-to-br from-card to-accent/40 rounded-[2rem] p-6 sm:p-8 border border-border/80 hover:shadow-md hover:border-primary/20 transition-all duration-300 text-left flex flex-col justify-between md:col-span-2 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
@@ -506,9 +506,8 @@ export default function Home() {
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-muted-foreground transition-transform duration-300 shrink-0 ${
-                      isOpen ? "transform rotate-180 text-primary" : ""
-                    }`}
+                    className={`w-5 h-5 text-muted-foreground transition-transform duration-300 shrink-0 ${isOpen ? "transform rotate-180 text-primary" : ""
+                      }`}
                   />
                 </button>
 
