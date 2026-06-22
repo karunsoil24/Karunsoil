@@ -1,0 +1,16 @@
+{
+  "name": "KARUN'S Food Products",
+  "short_name": "KARUN'S",
+  "description": "Pure Cold Pressed Oils & Authentic Spices from Kerala",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#4b7f52",
+  "icons": [
+    {
+      "src": "/assets/karuna_logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

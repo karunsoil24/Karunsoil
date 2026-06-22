@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(0.985 0.006 80); /* Soft warm organic ivory #FAF9F5 */
+  --foreground: oklch(0.24 0.015 65); /* Rich dark brown / charcoal #2F2926 */
+  --card: oklch(0.99 0.004 80); /* White clean card surfaces */
+  --primary: oklch(0.48 0.08 140); /* Natural coconut leaf green #487850 */
+  --primary-glow: oklch(0.55 0.09 140); /* Leaf green hover highlight */
+  --accent: oklch(0.96 0.015 110); /* Light sage green #F0F2EB */
+  --gold: oklch(0.80 0.11 85); /* Botanical Gold #D4AF37 */
+  --cream: oklch(0.985 0.006 80); /* Ivory alternate background */
+  --muted: oklch(0.96 0.015 110); /* Sage green secondary background */
+  --muted-foreground: oklch(0.48 0.03 70); /* Soft secondary text */
+  --border: oklch(0.92 0.01 80); /* Soft borders */
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-float-slow: float-slow 7s ease-in-out infinite;
+  --animate-float-soft: float-soft 5s ease-in-out infinite;
+  --animate-shimmer-pan: shimmer-pan 4s linear infinite;
+  --animate-spin-slow: spin-slow 26s linear infinite;
+  --animate-marquee: marquee 35s linear infinite;
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+  @keyframes float-soft {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes shimmer-pan {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Premium Card System */
+.premium-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-3xl);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(72, 120, 80, 0.12);
+  border-color: oklch(0.48 0.08 140 / 30%);
+}
+
+/* Layered Overlapping Card Styles */
+.layered-container {
+  position: relative;
+}
+
+.layered-under {
+  transform: rotate(-1.5deg) translateY(8px);
+  z-index: 10;
+}
+
+.layered-over {
+  position: relative;
+  z-index: 20;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(110%);
+  -webkit-backdrop-filter: blur(16px) saturate(110%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-nav {
+  background: rgba(250, 249, 245, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Typography Enhancements */
+.shimmer-text {
+  background: linear-gradient(
+    120deg,
+    var(--gold) 0%,
+    var(--primary) 25%,
+    var(--gold) 50%,
+    var(--primary) 75%,
+    var(--gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-pan 6s linear infinite;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, oklch(0.85 0.08 85) 0%, oklch(0.70 0.12 75) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Hide Scrollbar Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth Scrolling setup */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium Glow Button Utility */
+.btn-glow {
+  box-shadow: 0 0 15px oklch(0.48 0.08 140 / 25%), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 25px oklch(0.48 0.08 140 / 50%), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
