@@ -28,11 +28,20 @@ export default function Navbar() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+      document.documentElement.classList.add("menu-open");
+      document.body.classList.add("menu-open");
     } else {
       document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+      document.documentElement.classList.remove("menu-open");
+      document.body.classList.remove("menu-open");
     }
     return () => {
       document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+      document.documentElement.classList.remove("menu-open");
+      document.body.classList.remove("menu-open");
     };
   }, [isOpen]);
 
@@ -142,55 +151,58 @@ export default function Navbar() {
           <div
             className="fixed inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300 cursor-pointer"
             onClick={() => setIsOpen(false)}
+            onTouchMove={(e) => e.preventDefault()}
           />
 
           {/* Drawer Panel */}
           <div className="relative w-full max-w-[300px] max-w-[100vw] h-full bg-background border-l border-border shadow-2xl flex flex-col justify-between p-6 z-10 animate-in slide-in-from-right duration-300 overflow-y-auto">
-            {/* Header: Logo & Close */}
-            <div className="flex items-center justify-between">
-              <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 group">
-                <div className="relative w-8 h-8 overflow-hidden rounded-full bg-white flex items-center justify-center border border-primary/20 shadow-sm">
-                  <Image
-                    src="/assets/karuna_logo.png"
-                    alt="Karuna Logo"
-                    width={32}
-                    height={32}
-                    className="object-cover"
-                  />
-                </div>
-                <span className="font-display text-lg font-bold tracking-tight text-foreground">
-                  {siteConfig.name}
-                </span>
-              </Link>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-full text-foreground/80 hover:text-primary hover:bg-primary/10 transition-colors"
-                aria-label="Close menu"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
+            <div className="flex flex-col gap-8">
+              {/* Header: Logo & Close */}
+              <div className="flex items-center justify-between">
+                <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 group">
+                  <div className="relative w-8 h-8 overflow-hidden rounded-full bg-white flex items-center justify-center border border-primary/20 shadow-sm">
+                    <Image
+                      src="/assets/karuna_logo.png"
+                      alt="Karuna Logo"
+                      width={32}
+                      height={32}
+                      className="object-cover"
+                    />
+                  </div>
+                  <span className="font-display text-lg font-bold tracking-tight text-foreground">
+                    {siteConfig.name}
+                  </span>
+                </Link>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex items-center justify-center p-2 rounded-full text-foreground/80 hover:text-primary hover:bg-primary/10 transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
 
-            {/* Links */}
-            <nav className="flex flex-col gap-5 my-auto">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block py-2.5 rounded-xl font-body text-lg font-medium transition-colors ${
-                      isActive
-                        ? "text-primary font-semibold"
-                        : "text-foreground hover:text-primary"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
-            </nav>
+              {/* Links */}
+              <nav className="flex flex-col gap-2">
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`block py-2 rounded-xl font-body text-base font-medium transition-colors ${
+                        isActive
+                          ? "text-primary font-semibold"
+                          : "text-foreground hover:text-primary"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
 
             {/* WhatsApp Button at bottom */}
             <div className="pt-4">
