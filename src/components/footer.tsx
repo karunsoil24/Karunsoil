@@ -136,7 +136,7 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved. Registered Trademark. FSSAI Certified.
           </p>
-          {/* <p className="flex items-center gap-1">
+          <p className="flex items-center gap-1">
             Designed/Developed by{" "}
             <a
               href="https://www.kaeonstudios.com"
@@ -146,7 +146,7 @@ export default function Footer() {
             >
               Kaeon <ArrowUpRight className="w-3 h-3" />
             </a>
-          </p> */}
+          </p>
         </div>
       </div>
     </footer>
