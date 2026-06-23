@@ -26,7 +26,7 @@ export const products: Product[] = [
     sizes: ["500ml", "1L", "2L", "5L", "15L Bulk"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Cold Pressed Coconut Oil.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹210",
-    image: "/assets/Karun’s coconut oil.png",
+    image: "/assets/cold-pressed-coconut-oil-karuns-kerala.png",
     isPrimary: true
   },
   {
@@ -43,7 +43,7 @@ export const products: Product[] = [
     sizes: ["250ml", "500ml", "1L"],
     whatsappText: "Hello Karuna Enterprises,\n\nI would like to know more about KARUN'S Sesame Oil.\n\nPlease share pricing and availability.\n\nThank you.",
     priceApprox: "₹320",
-    image: "/assets/Karun's Sesame Seed Oil.png"
+    image: "/assets/sesame-oil-karuns-thrissur.png"
   },
   {
     id: "peanut-oil",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     sizes: ["500ml", "1L", "5L"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Peanut Oil.\n\nPlease share pricing and delivery details.\n\nThank you.",
     priceApprox: "₹280",
-    image: "/assets/Karun's Peanut oil.png"
+    image: "/assets/peanut-oil-karuns-kerala.png"
   },
   {
     id: "coriander",
@@ -75,7 +75,7 @@ export const products: Product[] = [
     sizes: ["100g", "250g", "500g", "1kg"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Pure Coriander Powder.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹90",
-    image: "/assets/Karun's Coriander powder.png"
+    image: "/assets/coriander-powder-karuns-thrissur.png"
   },
   {
     id: "sambar",
@@ -91,7 +91,7 @@ export const products: Product[] = [
     sizes: ["100g", "250g", "500g", "1kg"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Kerala Sambar Powder.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹120",
-    image: "/assets/Karun's Sambar powder.png"
+    image: "/assets/sambar-powder-karuns-kerala.png"
   },
   {
     id: "chilli",
@@ -107,7 +107,7 @@ export const products: Product[] = [
     sizes: ["100g", "250g", "500g", "1kg"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Pure Chilli Powder.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹110",
-    image: "/assets/Karun's Chilly powder.png"
+    image: "/assets/chilli-powder-karuns-thrissur.png"
   },
   {
     id: "turmeric",
@@ -123,7 +123,7 @@ export const products: Product[] = [
     sizes: ["100g", "250g", "500g", "1kg"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S High-Curcumin Turmeric Powder.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹80",
-    image: "/assets/Karun's turmeric powder.png"
+    image: "/assets/turmeric-powder-karuns-kerala.png"
   },
   {
     id: "garam-masala",
@@ -139,7 +139,7 @@ export const products: Product[] = [
     sizes: ["50g", "100g", "250g", "500g"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Traditional Garam Masala.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹150",
-    image: "/assets/Karun's Garam masala.png"
+    image: "/assets/garam-masala-karuns-thrissur.png"
   },
   {
     id: "chicken-masala",
@@ -155,6 +155,6 @@ export const products: Product[] = [
     sizes: ["50g", "100g", "250g", "500g"],
     whatsappText: "Hello Karuna Enterprises,\n\nI am interested in KARUN'S Authentic Chicken Masala.\n\nCould you please share the available pack sizes, pricing, and delivery details?\n\nThank you.",
     priceApprox: "₹140",
-    image: "/assets/Karun's chicken masala.png"
+    image: "/assets/chicken-masala-karuns-kerala.png"
   }
 ];

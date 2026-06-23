@@ -8,7 +8,7 @@ export const siteConfig = {
   addressLocality: "Chelakkara, Thrissur",
   addressRegion: "Kerala",
   addressCountry: "India",
-  url: "https://karunafoods.com", // Canonical URL domain placeholder
+  url: "https://www.karunsoil.com", // Canonical URL domain placeholder
   title: "Pure Kerala Coconut Oil & Spices | KARUN'S",
   description: "Shop 100% pure cold pressed coconut oil, virgin coconut oil, sesame oil, peanut oil & authentic Kerala masala powders. FSSAI certified. Direct from Thrissur factory.",
   whatsappBaseUrl: "https://wa.me/917994782438", // Official WhatsApp link base

@@ -1,8 +1,37 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ShieldCheck, Leaf, Landmark } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
+export const metadata: Metadata = {
+  title: "About KARUN'S | Edible Oil Manufacturer in Thrissur Kerala",
+  description: "Learn our story — FSSAI certified coconut oil and spice manufacturer in Thrissur, Kerala. Cold pressed, pure, natural. Supplying Kerala families and businesses.",
+  alternates: {
+    canonical: "https://www.karunsoil.com/about",
+  },
+  openGraph: {
+    title: "About KARUN'S | Edible Oil Manufacturer in Thrissur Kerala",
+    description: "Learn our story — FSSAI certified coconut oil and spice manufacturer in Thrissur, Kerala. Cold pressed, pure, natural. Supplying Kerala families and businesses.",
+    url: "https://www.karunsoil.com/about",
+    siteName: siteConfig.name,
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/assets/karuna_logo.png",
+        width: 512,
+        height: 512,
+        alt: `${siteConfig.name} Logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "About KARUN'S | Edible Oil Manufacturer in Thrissur Kerala",
+    description: "Learn our story — FSSAI certified coconut oil and spice manufacturer in Thrissur, Kerala. Cold pressed, pure, natural. Supplying Kerala families and businesses.",
+    images: ["/assets/karuna_logo.png"],
+  },
+};
 
 export default function About() {
   return (
@@ -59,7 +88,7 @@ export default function About() {
             {/* Main image card (Layered over) */}
             <div className="relative w-[280px] h-[350px] sm:w-[320px] sm:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-[#FAF9F5] transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <Image
-                src="/assets/spices-combo.png"
+                src="/assets/kerala-spices-masala-combo.png"
                 alt="KARUN'S pure food products and spices"
                 fill
                 className="object-cover"

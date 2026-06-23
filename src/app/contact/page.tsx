@@ -1,7 +1,36 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: "Contact KARUN'S | Chelakkara, Thrissur, Kerala",
+  description: "Contact Karuna Enterprises in Chelakkara, Thrissur, Kerala. Enquire for wholesale pricing, retail delivery, or B2B manufacturing.",
+  alternates: {
+    canonical: "https://www.karunsoil.com/contact",
+  },
+  openGraph: {
+    title: "Contact KARUN'S | Chelakkara, Thrissur, Kerala",
+    description: "Contact Karuna Enterprises in Chelakkara, Thrissur, Kerala. Enquire for wholesale pricing, retail delivery, or B2B manufacturing.",
+    url: "https://www.karunsoil.com/contact",
+    siteName: siteConfig.name,
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/assets/karuna_logo.png",
+        width: 512,
+        height: 512,
+        alt: `${siteConfig.name} Logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact KARUN'S | Chelakkara, Thrissur, Kerala",
+    description: "Contact Karuna Enterprises in Chelakkara, Thrissur, Kerala. Enquire for wholesale pricing, retail delivery, or B2B manufacturing.",
+    images: ["/assets/karuna_logo.png"],
+  },
+};
 
 export default function Contact() {
   return (
