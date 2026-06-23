@@ -143,7 +143,7 @@ export default function Home() {
         </section>
         <section>
           <h2>How to order from KARUN&apos;S?</h2>
-          <p>You can order KARUN&apos;S products by clicking any &quot;Order on WhatsApp&quot; button on the website, calling +91 7994782438, or emailing karunaenterpricescka2024@gmail.com.</p>
+          <p>You can order KARUN&apos;S products by clicking any &quot;Order on WhatsApp&quot; button on the website, calling +91 7994782438, or emailing karunaenterprisescka2024@gmail.com.</p>
         </section>
       </div>
 

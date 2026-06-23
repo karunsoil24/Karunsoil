@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-muted border-t border-border mt-auto font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-          
+
           {/* Logo and Brand Info */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-3">
@@ -136,7 +136,7 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved. Registered Trademark. FSSAI Certified.
           </p>
-          <p className="flex items-center gap-1">
+          {/* <p className="flex items-center gap-1">
             Designed/Developed by{" "}
             <a
               href="https://www.kaeonstudios.com"
@@ -146,7 +146,7 @@ export default function Footer() {
             >
               Kaeon <ArrowUpRight className="w-3 h-3" />
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
