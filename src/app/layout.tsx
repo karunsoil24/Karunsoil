@@ -125,6 +125,9 @@ export default function RootLayout({
       "contactType": "sales",
       "areaServed": "IN",
       "availableLanguage": ["en", "ml"]
+    },
+    "employee": {
+      "@type": "Organization"
     }
   };
 

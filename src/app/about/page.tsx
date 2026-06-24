@@ -106,6 +106,46 @@ export default function About() {
         </div>
       </section>
 
+      {/* --- STAFF/TEAM SECTION --- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Image (Left on Desktop, First on Mobile) */}
+          <div className="lg:col-span-5 relative flex items-center justify-center py-6">
+            {/* Stacked background card (Layered under) */}
+            <div className="absolute w-[280px] h-[210px] sm:w-[400px] sm:h-[300px] bg-primary/20 border border-primary/20 rounded-[2rem] transform rotate-3 translate-x-[15px] translate-y-[10px] pointer-events-none" />
+            
+            {/* Main image card (Layered over) */}
+            <div className="relative w-[280px] h-[210px] sm:w-[400px] sm:h-[300px] rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-[#FAF9F5] transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+              <Image
+                src="/assets/karuns-team-thrissur-kerala.jpeg"
+                alt="KARUN'S production and operations team at Karuna Enterprises in Chelakkara, Thrissur, Kerala"
+                fill
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-w-640px) 280px, 400px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </div>
+
+          {/* Content (Right on Desktop, Second on Mobile) */}
+          <div className="lg:col-span-7 text-left space-y-6">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
+              The People Behind KARUN&apos;S
+            </h2>
+            <p className="text-foreground/80 text-base sm:text-lg leading-relaxed">
+              Our team is the driving force behind KARUN&apos;S, bringing care, dedication, and attention to detail into every product we manufacture.
+            </p>
+            <p className="text-foreground/80 text-base sm:text-lg leading-relaxed">
+              Together, we work with a shared commitment to delivering pure, hygienic, and high-quality food products to customers across India.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed pt-2">
+              The KARUN&apos;S team operates from Chelakkara in Thrissur, Kerala, supporting the production of cold pressed oils and authentic spice products that are delivered to customers across India.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Behind The Scenes Section - Temporarily Disabled */}
       {/*
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-left">
