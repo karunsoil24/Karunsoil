@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp-button";
+import OnamOfferPopup from "@/components/onam-offer-popup";
 
 const fraunces = Fraunces({
   variable: "--font-display",
@@ -149,9 +150,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
-        {/* Floating WhatsApp Button - Temporarily Disabled
-        <WhatsAppButton />
-        */}
+        <OnamOfferPopup />
       </body>
     </html>
   );
