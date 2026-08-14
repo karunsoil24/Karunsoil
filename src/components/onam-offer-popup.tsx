@@ -122,29 +122,29 @@ export default function OnamOfferPopup() {
       role="dialog"
       aria-modal="true"
       aria-label="Onam Mega Offer"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden bg-black/65 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-hidden bg-black/70 backdrop-blur-sm animate-fade-in"
       onClick={handleClose}
     >
       <div
-        className="relative max-w-[90vw] sm:max-w-[440px] md:max-w-[480px] max-h-[88vh] flex flex-col items-center justify-center bg-card rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-white/20 p-3.5 sm:p-4 transition-all duration-300 animate-scale-up"
+        className="relative w-full max-w-[88vw] xs:max-w-[340px] sm:max-w-[420px] md:max-w-[460px] max-h-[80vh] sm:max-h-[85vh] flex flex-col items-center justify-between bg-card rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-white/20 p-3 sm:p-4 transition-all duration-300 animate-scale-up"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Accessible Close Button */}
         <button
           onClick={handleClose}
           aria-label="Close offer popup"
-          className="absolute top-5 right-5 z-20 w-9 h-9 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center shadow-lg backdrop-blur-md transition-all duration-200 hover:scale-110 active:scale-95 border border-white/30"
+          className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/75 hover:bg-black text-white flex items-center justify-center shadow-lg backdrop-blur-md transition-all duration-200 hover:scale-110 active:scale-95 border border-white/30"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
         </button>
 
-        {/* Clickable Banner Image */}
+        {/* Clickable Banner Image Container */}
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleBannerClick}
-          className="block relative w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary rounded-xl sm:rounded-2xl overflow-hidden group"
+          className="block relative w-full flex-1 min-h-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary rounded-xl sm:rounded-2xl overflow-hidden group flex items-center justify-center"
           aria-label="Onam Mega Offer Combo - Order on WhatsApp"
         >
           <Image
@@ -153,21 +153,21 @@ export default function OnamOfferPopup() {
             width={853}
             height={1280}
             priority
-            className="w-full h-auto max-h-[65vh] sm:max-h-[70vh] object-contain rounded-xl sm:rounded-2xl transition-transform duration-300 group-hover:scale-[1.01]"
+            className="w-auto h-auto max-h-[52vh] sm:max-h-[65vh] md:max-h-[68vh] max-w-full object-contain aspect-[853/1280] rounded-xl sm:rounded-2xl transition-transform duration-300 group-hover:scale-[1.01]"
           />
         </a>
 
         {/* Single Centered CTA Button Directly Below Banner */}
-        <div className="w-full pt-3 flex justify-center">
+        <div className="w-full pt-3 sm:pt-3.5 shrink-0 flex justify-center">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleBannerClick}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 font-body text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-primary hover:bg-primary-glow px-8 py-3.5 rounded-full shadow-md btn-glow transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 min-h-[44px]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-body text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-primary hover:bg-primary-glow px-4 sm:px-8 py-3.5 rounded-full shadow-md btn-glow transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] whitespace-nowrap"
           >
             <MessageSquare className="w-4 h-4 shrink-0" />
-            <span>BUY NOW</span>
+            <span>BUY NOW ON WHATSAPP</span>
           </a>
         </div>
       </div>
