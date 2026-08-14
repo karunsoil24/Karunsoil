@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+import FranchiseCTA from "@/components/franchise-cta";
+import WholesaleBlock from "@/components/wholesale-block";
 
 export const metadata: Metadata = {
   title: "Contact KARUN'S | Chelakkara, Thrissur, Kerala",
@@ -127,6 +129,14 @@ export default function Contact() {
           </div>
 
         </div>
+      </section>
+
+      {/* --- WHOLESALE INFORMATION BLOCK --- */}
+      <WholesaleBlock className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 font-body" />
+
+      {/* --- FRANCHISE ENQUIRY CTA --- */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <FranchiseCTA />
       </section>
 
       {/* --- CONTACT CTA --- */}

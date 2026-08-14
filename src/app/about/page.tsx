@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ShieldCheck, Leaf, Landmark } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import FranchiseSection from "@/components/franchise-section";
+import WholesaleBlock from "@/components/wholesale-block";
 
 export const metadata: Metadata = {
   title: "About KARUN'S | Edible Oil Manufacturer in Thrissur Kerala",
@@ -146,49 +148,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* Behind The Scenes Section - Temporarily Disabled */}
-      {/*
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-left">
-        <div className="max-w-2xl mb-12">
-          <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-3">Behind the Scenes</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
-            How We Process Our Products
-          </h2>
-          <p className="text-muted-foreground text-sm mt-2">
-            No chemicals, no heavy refining, no shortcut heating. We keep our production process transparent and clean.
-          </p>
-        </div>
+      {/* --- FRANCHISE SECTION --- */}
+      <FranchiseSection />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
-            <h3 className="font-display text-lg font-bold text-foreground mb-4 pb-2 border-b border-border">
-              1. Coconut Oils & VCO
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Our coconut oil is extracted from premium quality, sun-dried copra sourced from local Kerala groves, using controlled-temperature cold pressing. Our Virgin Coconut Oil (VCO) is extracted directly from fresh coconut milk without heat, refining, or bleaching—preserving the maximum amount of protective lauric acid.
-            </p>
-          </div>
-
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
-            <h3 className="font-display text-lg font-bold text-foreground mb-4 pb-2 border-b border-border">
-              2. Sesame & Peanut Oils
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Our Sesame Oil is cold pressed from select premium white sesame seeds, conserving natural sesamol and sesamin antioxidants for joint and skin wellness. Our Peanut Oil is extracted from top-grade peanuts, resulting in a naturally high smoke point (225–232°C) perfect for deep frying without burning.
-            </p>
-          </div>
-
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
-            <h3 className="font-display text-lg font-bold text-foreground mb-4 pb-2 border-b border-border">
-              3. Traditional Spice Powders
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Our spices are ground fresh in small batches from whole, traceable raw spices. Coriander seeds are dry-roasted and milled. Turmeric rhizomes are sourced from high-curcumin farms. Chilli is milled for natural color and flavor. No rice flour fillers, salt, or artificial red dyes are ever added.
-            </p>
-          </div>
-        </div>
-      </section>
-      */}
+      {/* --- WHOLESALE INFORMATION BLOCK --- */}
+      <WholesaleBlock />
     </div>
   );
 }

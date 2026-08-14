@@ -23,11 +23,40 @@ export const siteConfig = {
     "Peanut Oil Kerala",
     "Kerala Spice Powders",
     "Thrissur Food Products",
+    "Karun's franchise",
+    "Karun's franchises",
+    "Karun's products wholesale",
+    "wholesale products",
+    "wholesale delivery across India",
     "Chelakkara",
     "Thrissur",
     "Kerala",
     "India"
   ],
+
+  franchises: [
+    {
+      id: "chelakkara",
+      name: "Chelakkara",
+      district: "Thrissur District",
+      state: "Kerala"
+    },
+    {
+      id: "palluruthy",
+      name: "Palluruthy",
+      district: "Fort Kochi, Ernakulam District",
+      state: "Kerala"
+    },
+    {
+      id: "mettuguda",
+      name: "Mettuguda",
+      district: "Hyderabad",
+      state: "Telangana"
+    }
+  ],
+
+  franchiseWhatsAppMessage: "Hello, I’m interested in getting a Karun's franchise. Please share the franchise details, requirements, investment information, and next steps.",
+  wholesaleWhatsAppMessage: "Hello Karuna Enterprises,\n\nI am interested in purchasing Karun's products at wholesale prices.\n\nPlease share wholesale pricing, product catalog, and delivery details for bulk orders.\n\nThank you.",
 
   // Products Database
   products: {
