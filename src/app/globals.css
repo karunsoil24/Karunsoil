@@ -38,7 +38,7 @@
   --animate-float-soft: float-soft 5s ease-in-out infinite;
   --animate-shimmer-pan: shimmer-pan 4s linear infinite;
   --animate-spin-slow: spin-slow 26s linear infinite;
-  --animate-marquee: marquee 35s linear infinite;
+  --animate-marquee: marquee 75s linear infinite;
 
   @keyframes float-slow {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
