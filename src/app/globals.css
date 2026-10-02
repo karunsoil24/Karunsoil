@@ -66,6 +66,13 @@ html,
 body {
   overflow-x: hidden;
   max-width: 100vw;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Image rendering & performance optimization */
+img {
+  content-visibility: auto;
 }
 
 html.menu-open,
