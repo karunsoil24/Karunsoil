@@ -368,11 +368,12 @@ export default function HomeClient() {
                   <div className="relative w-full aspect-[1086/1448] overflow-hidden bg-accent/30">
                     <Image
                       src={product.image}
-                      alt={product.name}
-                      width={1086}
-                      height={1448}
-                      quality={90}
+                      alt={`KARUN'S ${product.name} - Pure Kerala Food Product from Chelakkara, Thrissur`}
+                      width={600}
+                      height={800}
+                      quality={85}
                       loading="lazy"
+                      sizes="(max-width: 640px) 200px, 240px"
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
