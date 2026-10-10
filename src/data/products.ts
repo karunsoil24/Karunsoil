@@ -112,7 +112,7 @@ export const products: Product[] = [
     priceApprox: "₹700",
     image: "/assets/mustard-oil.png"
   },
-  {
+  /* {
     id: "nadan-pure-ghee",
     name: "Nadan Pure Ghee",
     category: "oils",
@@ -127,7 +127,7 @@ export const products: Product[] = [
     whatsappText: "Hello Karuna Enterprises,\n\nI want to buy KARUN'S Nadan Pure Ghee (1L - ₹1200).\n\nPlease share delivery details.\n\nThank you.",
     priceApprox: "₹1200",
     image: "/assets/nadan-pure-ghee.png"
-  },
+  }, */
 
   // --- MASALA POWDERS & SPICES ---
   {
@@ -340,7 +340,7 @@ export const products: Product[] = [
     priceApprox: "₹85",
     image: "/assets/ragi-puttupodi.png"
   },
-  {
+  /* {
     id: "ragi-sprouted",
     name: "Sprouted Ragi Flour",
     category: "flours",
@@ -355,7 +355,7 @@ export const products: Product[] = [
     whatsappText: "Hello Karuna Enterprises,\n\nI want to buy KARUN'S Sprouted Ragi Flour (500g - ₹85).\n\nPlease share delivery details.\n\nThank you.",
     priceApprox: "₹85",
     image: "/assets/ragi-puttupodi.png"
-  },
+  }, */
   {
     id: "corn-puttupodi",
     name: "Corn Puttupodi",
@@ -372,7 +372,7 @@ export const products: Product[] = [
     priceApprox: "₹85",
     image: "/assets/corn-puttupodi.png"
   },
-  {
+  /* {
     id: "kuthari-chemba",
     name: "Kuthari Chemba Puttupodi",
     category: "flours",
@@ -387,7 +387,7 @@ export const products: Product[] = [
     whatsappText: "Hello Karuna Enterprises,\n\nI want to buy KARUN'S Kuthari Chemba Puttupodi (500g - ₹70).\n\nPlease share delivery details.\n\nThank you.",
     priceApprox: "₹70",
     image: "/assets/rice-puttupodi.png"
-  },
+  }, */
   {
     id: "chammanthi-podi",
     name: "Roasted Chammanthi Podi",
@@ -406,7 +406,7 @@ export const products: Product[] = [
   },
   {
     id: "idly-dosa-podi",
-    name: "Idly Dosa Podi (Gunpowder)",
+    name: "Idly Dosa Podi",
     category: "flours",
     shortDescription: "Spicy roasted lentil podi for idli and dosa. Mix with sesame oil or ghee for unbeatable South Indian breakfast taste.",
     description: "KARUN'S Idly Dosa Podi is roasted with urad dal, chana dal, red chillies, sesame seeds, and asafoetida. Spicy, crunchy, and aromatic.",
@@ -454,7 +454,7 @@ export const products: Product[] = [
     priceApprox: "₹150",
     image: "/assets/rice-kondattam.png"
   },
-  {
+  /* {
     id: "bitter-gourd-fry",
     name: "Bitter Gourd Fry (Pavakka Kondattam)",
     category: "snacks",
@@ -469,8 +469,8 @@ export const products: Product[] = [
     whatsappText: "Hello Karuna Enterprises,\n\nI want to buy KARUN'S Bitter Gourd Fry (100g - ₹80).\n\nPlease share delivery details.\n\nThank you.",
     priceApprox: "₹80",
     image: "/assets/kerala-spices-masala-combo.png"
-  },
-  {
+  }, */
+  /* {
     id: "curd-chilly",
     name: "Curd Chilly (Kondattam Mulaku)",
     category: "snacks",
@@ -533,7 +533,7 @@ export const products: Product[] = [
     whatsappText: "Hello Karuna Enterprises,\n\nI want to buy KARUN'S Wheat Halwa (500g - ₹200).\n\nPlease share delivery details.\n\nThank you.",
     priceApprox: "₹200",
     image: "/assets/kerala-spices-masala-combo.png"
-  },
+  }, */
   {
     id: "banana-chips",
     name: "Kerala Banana Chips",
@@ -598,7 +598,7 @@ export const products: Product[] = [
     priceApprox: "₹900",
     image: "/assets/chakka-halwa.png"
   },
-  {
+  /* {
     id: "pulinji",
     name: "Authentic Kerala Pulinji (Inji Puli)",
     category: "snacks",
@@ -629,7 +629,7 @@ export const products: Product[] = [
     whatsappText: "Hello Karuna Enterprises,\n\nI want to buy KARUN'S Vadukapuli Pickle (250g - ₹80).\n\nPlease share delivery details.\n\nThank you.",
     priceApprox: "₹80",
     image: "/assets/kerala-spices-masala-combo.png"
-  },
+  }, */
 
   // --- DRY FRUITS & NUTS ---
   {
