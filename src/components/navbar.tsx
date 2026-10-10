@@ -155,7 +155,7 @@ export default function Navbar() {
           />
 
           {/* Drawer Panel */}
-          <div className="relative w-full max-w-[300px] max-w-[100vw] h-full bg-background border-l border-border shadow-2xl flex flex-col justify-between p-6 z-10 animate-in slide-in-from-right duration-300 overflow-y-auto">
+          <div className="relative w-full max-w-[300px] h-full bg-background border-l border-border shadow-2xl flex flex-col justify-between p-6 z-10 animate-in slide-in-from-right duration-300 overflow-y-auto">
             <div className="flex flex-col gap-8">
               {/* Header: Logo & Close */}
               <div className="flex items-center justify-between">

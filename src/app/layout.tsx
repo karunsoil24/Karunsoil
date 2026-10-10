@@ -149,6 +149,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -122,19 +122,9 @@ const priceListTableData = [
         message: "Hello Karuna Enterprises,\n\nI want to buy Ragi Puttupodi (500g - ₹85).\n\nPlease share delivery details.\n\nThank you."
       },
       {
-        name: "Ragi Sprouted",
-        details: "500g: ₹85",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Sprouted Ragi Flour (500g - ₹85).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
         name: "Corn Puttupodi",
         details: "500g: ₹85",
         message: "Hello Karuna Enterprises,\n\nI want to buy Corn Puttupodi (500g - ₹85).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Kuthari Chemba",
-        details: "500g: ₹70",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Kuthari Chemba Puttupodi (500g - ₹70).\n\nPlease share delivery details.\n\nThank you."
       },
       {
         name: "Chammanthi Podi",
@@ -149,7 +139,7 @@ const priceListTableData = [
     ]
   },
   {
-    category: "Snacks & Specialties",
+    category: "Snacks & Sweets",
     items: [
       {
         name: "Rice Pappadam",
@@ -160,31 +150,6 @@ const priceListTableData = [
         name: "Rice Kondattam",
         details: "400g: ₹150",
         message: "Hello Karuna Enterprises,\n\nI want to buy Rice Kondattam (400g - ₹150).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Bitter Gourd Fry",
-        details: "100g: ₹80",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Bitter Gourd Fry (100g - ₹80).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Cord Chilly (Curd Chilly)",
-        details: "100g: ₹100",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Cord Chilly (100g - ₹100).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Arrowroot Powder",
-        details: "500g: ₹700",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Arrowroot Powder (500g - ₹700).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Jackfruit Powder",
-        details: "500g: ₹400",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Jackfruit Powder (500g - ₹400).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Wheat Halwa",
-        details: "500g: ₹200",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Wheat Halwa (500g - ₹200).\n\nPlease share delivery details.\n\nThank you."
       },
       {
         name: "Banana Chips",
@@ -205,22 +170,12 @@ const priceListTableData = [
         name: "Chakka Halwa",
         details: "1kg: ₹900",
         message: "Hello Karuna Enterprises,\n\nI want to buy Chakka Halwa (1kg - ₹900).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Pulinji",
-        details: "150g: ₹80",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Pulinji (150g - ₹80).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Vadukapuli Pickle",
-        details: "250g: ₹80",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Vadukapuli Pickle (250g - ₹80).\n\nPlease share delivery details.\n\nThank you."
-      },
-      {
-        name: "Nadan Ghee",
-        details: "1L: ₹1200",
-        message: "Hello Karuna Enterprises,\n\nI want to buy Nadan Ghee (1L - ₹1200).\n\nPlease share delivery details.\n\nThank you."
-      },
+      }
+    ]
+  },
+  {
+    category: "Dry Fruits & Nuts",
+    items: [
       {
         name: "Cashew",
         details: "1kg: ₹1350",
@@ -393,9 +348,9 @@ function ProductsContent() {
                 <span className="text-xs font-semibold text-foreground/80">Premium Grade · FSSAI Approved</span>
               </div>
 
-              <h1 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
                 {flagshipProduct.name}
-              </h1>
+              </h2>
 
               <p className="text-sm sm:text-base text-foreground/85 leading-relaxed font-medium">
                 {flagshipProduct.shortDescription}
@@ -446,9 +401,9 @@ function ProductsContent() {
         <span className="text-xs font-bold text-primary uppercase tracking-widest block mb-3">
           KARUN&apos;S OIL MILL CHELAKKARA
         </span>
-        <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-[1.15] mb-4">
+        <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-[1.15] mb-4">
           Explore Our Pure Food Products
-        </h2>
+        </h1>
         <p className="text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto">
           Cold pressed edible oils, pure ghee, roasted spices, puttupodi, traditional snacks, and dry fruits. All India Delivery.
         </p>
